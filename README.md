@@ -1,6 +1,3 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
@@ -8,63 +5,71 @@ In the project directory, you can run:
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Quick Summary
 
-### `npm test`
+Project is made on HTML, CSS, Javascript, React and Bootstrap. I made a simple app I fetch the data that was provided
+and there's is some challenges that I encounter and learn. And I believe if I have more time I can try out things and implement it on the code. 
+There's some parts also that I know that can skill improve and It's a good learning exprience for me.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Unfortunately I don't know much of Typescript yet, that why I wasn't able to implement it in my code. But it's something that I'm learning already.
 
-### `npm run build`
+# Components Files
+- Community.js -> It's a file where I use props to fetch the data from `CommunityPage File`.
+- CommunityHomes.js => It's a file where I fetch the data for the community home prices.
+- Header.js => I just add a simple Nav where I can navigate pages by using {Link}
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Pages 
+-CommunityPage => Is the main file where I fetch data for community and name, images, and group.
+-Home => This is the file that I used to fetch the data for Home Community where I grab prices and average it.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Note:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    --I created a variable where it stores the data and then  I used the filter method to check if the CommunityId matched.
+    --Then I created an empty array where I can store the filteredSix data.
+    --I map the filteredSix to get all the prices of the certain communities then pushed it into the empty array to saved it there.
+    --Then I created a variable where it stores the result then I grabbed the array where I stored the data then used reduce method to sum up everything to get the average,
 
-### `npm run eject`
+    const filteredIdSix = dataTwo.filter(item => item.communityId === "7fccecd9-d246-4681-84e9-a92861999c20");
+    const arraySix = [];
+    filteredIdSix.map(item => {
+        return arraySix.push(item.price)
+    })
+    let resultSix = arraySix.reduce((accumulator, currentValue) =>{
+        return Math.round(accumulator + currentValue)
+    }, 0)
+###
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Follow Up Question:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+If given more time, how would you improve the quality of your application? Would you implement anything differently?
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Yes, definitely. In my honest opinion I believe that I can do better and improve the quality of the application even more. I would probably try implement Typescript for better code structure and less buggy. And Other frameworks as well.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Evaluation Considerations
 
-## Learn More
+###	Is the information displayed in a way that is easy to understand?
+    - Yes, It'easy to understand.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+###	Does the design consider what jobs the user needs to perform?
+    -Yes, when designing products, services, or systems, considering the tasks and jobs that users need to perform is a crucial aspect of the design process.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Does the design look professional and polished?
+    - I would say it's not the best, but can be improve more
 
-### Code Splitting
+###	Does your application meet all the requirements?
+    -Unfortunately I wasn't able to implement Typescript and I struggle on the logic side,
+    specially running two API's which a learning experience for me.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+###	Is the application designed to be mobile-friendly or mobile-first?
+    - Yes
 
-### Analyzing the Bundle Size
+###	How are network errors handled?
+    - I believe so
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+###	Does your application handle invalid data?
+    - No, but it was something I would do if given an opportunity.
 
-### Making a Progressive Web App
+###	Is your code/components/folders structured in a thoughtful way
+    - Yes
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
